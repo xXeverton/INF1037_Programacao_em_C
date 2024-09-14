@@ -16,8 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercicios basicos com expr
 		Ambiente de Teste de Programas\Ex5.c = Ambiente de Teste de Programas\Ex5.c
 		Ambiente de Teste de Programas\Ex6.c = Ambiente de Teste de Programas\Ex6.c
 		Ambiente de Teste de Programas\Ex7.c = Ambiente de Teste de Programas\Ex7.c
+		Ambiente de Teste de Programas\Ex8.c = Ambiente de Teste de Programas\Ex8.c
 		Ambiente de Teste de Programas\Ex9.c = Ambiente de Teste de Programas\Ex9.c
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Funções", "Funções", "{1CD36FB4-1B1E-4904-AEA5-68F8C1D063BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
