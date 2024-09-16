@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #include "functions.h"
 
 
@@ -34,8 +35,35 @@ float retorna_gf(float ce, float cg, float mat, float pt)
 
 
 // Ex7 
-float cal
+float calcula_preco(int codigo)
+{
+	float preco_basico = (codigo / 100) * 15.00f + (codigo % 100);
+	int percent_desc = (codigo % 100);
+	printf("Preco basico: $%.2f\n", preco_basico);
+	printf("Percentual desconto: $%d\n", percent_desc);
 
+	return preco_basico - calcula_percent(preco_basico, percent_desc);
+}
+
+
+// Ex8
+int soma_dig(int num)
+{
+	return (num / 10) + (num % 10);
+}
+
+
+int gera_senha(int dia, int mes, int ano)
+{
+	int s_dia = soma_dig(dia);
+	int s_mes = soma_dig(mes);
+	int s_ano = soma_dig(ano%100);
+
+	char res = "";
+	strcat(res, s_dia);
+
+
+}
 
 
 
@@ -43,6 +71,9 @@ float cal
 int main(void)
 {
 
+	int a = 27;
+	int r = soma_dig(a);
+	printf("%d", r);
 
 	return 0;
 }
