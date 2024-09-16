@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_DEPRECATE  
+
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
@@ -53,17 +55,32 @@ int soma_dig(int num)
 }
 
 
-int gera_senha(int dia, int mes, int ano)
+void gera_senha(int dia, int mes, int ano)
 {
 	int s_dia = soma_dig(dia);
 	int s_mes = soma_dig(mes);
 	int s_ano = soma_dig(ano%100);
 
-	char res = "";
-	strcat(res, s_dia);
+	char res[8];
+	char m[3];
+	char a[3];
+	ano = ano % 100;
 
+	// converte inteiro para string;	
+	sprintf(res, "%d", s_dia);
+	sprintf(m, "%d", s_mes);
+	sprintf(a, "%d", s_ano);
+	
+	strcat(res, m);
+	strcat(res, a);
 
+	printf("%s", res);
 }
+
+
+// Ex9 
+
+
 
 
 
@@ -71,9 +88,7 @@ int gera_senha(int dia, int mes, int ano)
 int main(void)
 {
 
-	int a = 27;
-	int r = soma_dig(a);
-	printf("%d", r);
+	
 
 	return 0;
 }
