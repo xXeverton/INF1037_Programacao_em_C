@@ -1,5 +1,7 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
+
+#define N 8
 
 // ex1
 void calcula(float a, float b, float* soma, float* dif, float* prod)
@@ -79,7 +81,7 @@ float* prod_vetorial(float* u, float* v)
 	float* produto = (float*)malloc( 3 * sizeof(float));
 	if (produto == NULL)
 	{
-		printf("ERRO na aloca��o\n");
+		printf("ERRO na alocação\n");
 		exit(1);
 	}
 
@@ -98,7 +100,7 @@ float* polinomio(float* a, float* k, int n)
 	float* p = (float*)malloc(n * sizeof(float));
 	if (p == NULL)
 	{
-		printf("ERRO na aloca��o\n");
+		printf("ERRO na alocação\n");
 		exit(1);
 	}
 
@@ -111,19 +113,125 @@ float* polinomio(float* a, float* k, int n)
 }
 
 
-int main(void)
+// ex8
+/*
+Dado um vetor de n numeros reais, determinar os numeros que compoem o vetor e o numero de vezes que cada um
+deles ocorre no mesmo.
+Exemplo: v[8] = { ‐1.7,  3.0,  0.0,  1.5,  0.0, ‐1.7,  2.3, ‐1.7 }
+Saída: ‐1.7 ocorre 3 vezes
+3.0 ocorre 1 vez
+0.0 ocorre 2 vezes
+1.5 ocorre 1 vez
+2.3 ocorre 1 vez
+*/
+void ocorrencia(double* v)
 {
-
-	float u[3] = { 1.0f, 2.0f, 3.0f };
-	float v[3] = { 1.0f, 2.0f, 3.0f };
-	float* produto = prod_vetorial(u, v);
-
-	for (int i = 0; i < 3; ++i)
+	// assumindo que 9999 e um numero especial invalido
+	double jaEncontrei[N];
+	for (int i = 0; i < N; ++i)
 	{
-		printf("%.2f\n", produto[i]);
+		jaEncontrei[i] = 9999.0; // Preenchendo um vetor com a mesma quantidade de elementos do vetor
 	}
 
-	free(produto);
+	for (int i = 0; i < N; ++i)
+	{
+		double elemento = v[i];
+
+		// verifica se o elemento ja foi encontrado antes
+		int encontrei = 0;
+		for (int k = 0; k < N; ++k)
+		{
+			if (jaEncontrei[k] == elemento)
+			{
+				encontrei = 1;
+				break;
+			}
+		}
+
+		if (encontrei == 1)
+		{
+			continue;
+		}
+		jaEncontrei[i] = elemento;
+
+		// Se chegou aqui, e a primeira vez que encontrei esse elemento
+		// Conta quantas vezes o elemento aparece
+		int contador = 0;
+		for (int j = 0; j < N; ++j)
+		{
+			double segundoElemento = v[j];
+			if (segundoElemento == elemento)
+			{
+				++contador;
+			}
+		}
+
+		printf("Elemento %f aparece %d vezes \n", elemento, contador);
+
+	}
+}
+
+
+int* criaAprovados(int qtd_alunos, int* vinsc, float* vnota, int* qtd_aprovados)
+{
+	*qtd_aprovados = 0;
+	// contando quantos foram aprovados
+	for (int i = 0; i < qtd_alunos; ++i)
+	{
+		if (vnota[i] >= 5.0f)
+		{
+			*qtd_aprovados += 1;
+		}
+	}
+
+	// alocando memoria 
+	int qtd = *qtd_aprovados;
+	int* ap = (int*)malloc(sizeof(int) * (qtd));
+	if (ap == NULL)
+	{
+		return NULL;
+	}
+
+	for (int i = 0; i < qtd_alunos; ++i)
+	{
+		if (vnota[i] >= 5.0f)
+		{
+			ap[i] = vinsc[i];
+		}
+	}
+
+	return ap;
+}
+
+
+
+
+int main(void)
+{
+	int qtd_alunos = 3;
+	int qtd_aprovados;
+	int vinsc[3] = { 2320462, 2320463, 2320464 };
+	float vnota[3] = {0.0f, 3.0f, 2.0f};
+
+	int* ap = criaAprovados(qtd_alunos, vinsc, vnota, &qtd_aprovados);
+	if (ap == NULL)
+	{
+		printf("Memoria insuficiente\n");
+		free(ap);
+		exit(1);
+	}
+
+	if (qtd_aprovados == 0)
+	{
+		printf("Nenhum aluno aprovado!\n");
+	}
+
+	else{	printf("alunos aprovados:\n");
+		for (int i = 0; i < qtd_aprovados; ++i)
+		{
+			printf("%d;\n", ap[i]);
+		}
+	}
 
 
 	return 0;
