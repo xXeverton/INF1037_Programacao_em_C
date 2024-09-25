@@ -101,6 +101,13 @@ float* polinomio(float* a, float* k, int n)
 		printf("ERRO na alocação\n");
 		exit(1);
 	}
+
+	for (int i = 0; i < n; ++i)
+	{
+		p[i] = k[i] + a[i];
+	}
+
+	return p;
 }
 
 
