@@ -28,6 +28,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Funções", "Funções", "{
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de ponteiros, vetores e alocação dinâmica", "Exercícios básicos de ponteiros, vetores e alocação dinâmica", "{CB4A506B-AE8C-4E08-88C7-5FAC40FD7059}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\ponteiros_vetores_alocacao.c = Ambiente de Teste de Programas\ponteiros_vetores_alocacao.c
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

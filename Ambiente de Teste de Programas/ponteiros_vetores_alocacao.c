@@ -172,6 +172,7 @@ void ocorrencia(double* v)
 }
 
 
+// ex9 
 int* criaAprovados(int qtd_alunos, int* vinsc, float* vnota, int* qtd_aprovados)
 {
 	*qtd_aprovados = 0;
@@ -204,35 +205,70 @@ int* criaAprovados(int qtd_alunos, int* vinsc, float* vnota, int* qtd_aprovados)
 }
 
 
+int* valores_entre(int* v, int n, int min, int max, int* qtd)
+{	
+	// verificar a qtd de elementos que são maiores que o min e menores que o max
+	*qtd = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (v[i] > min && v[i] < max)
+		{
+			*qtd += 1;
+		}
+	}
+
+	// caso a quantidade seja maior que zero, alocar dinamicamente uma área do tamanho exato necessário para armazenar os valores
+	if (*qtd > 0)
+	{
+		int* novo_vetor = (int*)malloc(sizeof(int) * (*qtd));
+		if (novo_vetor == NULL)
+		{
+			return NULL; // Caso alocação falhar
+		}
+
+
+		// Copia os elementos do vetor que sejam maiores que min e menores que max para a área alocada dinamicamente
+		int j = 0;
+		for (int i = 0; i < n; i++)
+		{
+			if (v[i] > min && v[i] < max)
+			{
+				novo_vetor[j] = v[i];
+				++j;
+			}
+		}
+		return novo_vetor;
+	}
+
+	return NULL;
+}
+
 
 
 int main(void)
 {
-	int qtd_alunos = 3;
-	int qtd_aprovados;
-	int vinsc[3] = { 2320462, 2320463, 2320464 };
-	float vnota[3] = {0.0f, 3.0f, 2.0f};
+	// ex10
+	int n = 6;
+	int v[6] = { 0, 1, 2, 3, 4, 5 };
 
-	int* ap = criaAprovados(qtd_alunos, vinsc, vnota, &qtd_aprovados);
-	if (ap == NULL)
+	int min;
+	printf("Informe um valor min\n");
+	scanf("%d", &min);
+	int max;
+	printf("Informe um valor min\n");
+	scanf("%d", &max);
+	int qtd;
+
+	int* novo_vetor = valores_entre(v, n, min, max, &qtd);
+	if (novo_vetor == NULL)
 	{
-		printf("Memoria insuficiente\n");
-		free(ap);
+		printf("ERRO");
 		exit(1);
 	}
-
-	if (qtd_aprovados == 0)
+	for (int i = 0; i < qtd; ++i)
 	{
-		printf("Nenhum aluno aprovado!\n");
+		printf("%d, ", novo_vetor[i]);
 	}
-
-	else{	printf("alunos aprovados:\n");
-		for (int i = 0; i < qtd_aprovados; ++i)
-		{
-			printf("%d;\n", ap[i]);
-		}
-	}
-
 
 	return 0;
 }
