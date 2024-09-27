@@ -58,20 +58,50 @@ int busca(char* str, char c)
 
 
 // ex4
-void maiuisculo(char* str, char c)
+void maiusculo(char* str)
 {
 	if (*str == '\0')
+		return;
+	else if (*str >= 'a' && *str <= 'z')
+		*str = *str - ('a' - 'A');
 
-
+	maiusculo(str + 1);
 }
 
+
+// ex5
+int comprimento(char* s)
+{
+	if (*s == '\0')
+		return 0;
+	return 1 + comprimento(s + 1);
+}
+
+// ex6
+void eliminaAB(char* s)
+{
+	for (int i = 0,j = i; s[i] != '\0'; ++i)
+	{
+		if (*s == 'A' && *(s + 1) == 'B')
+		{
+			i += 2;
+		}
+
+		s[j] = s[i];
+		++j;
+
+	}
+}
 
 
 int main(void)
 {
-	char s[] = "Brasi";
-	int r = busca(s, 'l');
-	printf("%d", r);
+	char s[] = "ABCDE";
+	printf("%s\n", s);
+	eliminaAB(s);
+	printf("%s\n", s);
+
+
 
 
 
