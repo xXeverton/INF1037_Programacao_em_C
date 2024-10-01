@@ -164,26 +164,24 @@ char* retorna_nome(char* s)
 	}
 
 
-	// alocar espaco para os nomes e copiar os nomes
+	// alocar espaco para os nomes
 	for (int i = 0; i < qtd_nomes; ++i)
 	{
-		char temp[21];
 		int tamanho = 0;
 		for (int j = 0; s[j] != ' '; ++j)
 		{
-			temp[j] = s[j];
 			++tamanho;
 		}
-		temp[tamanho] = '\0';
 
 		vetor[i] = (char*)malloc((tamanho + 1) * sizeof(char));
 		if (vetor[i] == NULL)
 		{
 			return NULL;
 		}
-
-		strcpy(vetor[i], temp);
 	}
+
+
+
 
 
 	// montar a string
@@ -195,6 +193,7 @@ char* retorna_nome(char* s)
 	strcat(resposta, virgula);
 	for (int i = 0; i < (qtd_nomes - 1); ++i)
 	{
+		char inicial = vetor[i][0];
 		strcat(resposta, vetor[i][0]);
 		strcat(resposta, ponto);
 	}
