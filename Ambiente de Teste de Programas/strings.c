@@ -216,13 +216,19 @@ char* retorna_nome(char* s)
 }
 
 
+// ex10
+int maiorQueX(int n, int v[], int x);
+
+
 
 int main(void)
-{
+{	
+	/*	Questao 9	
 	char s1[] = "Joao Jose da Silva";
 	char* s2 = retorna_nome(s1);
 
 	printf("%s\n", s1);
+	*/
 
 
 	return 0;
