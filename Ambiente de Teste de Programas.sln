@@ -32,6 +32,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de pon
 		Ambiente de Teste de Programas\ponteiros_vetores_alocacao.c = Ambiente de Teste de Programas\ponteiros_vetores_alocacao.c
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de cadeias de caracteres e recursão", "Exercícios básicos de cadeias de caracteres e recursão", "{6E5CE224-BF67-48F3-AF32-978FED2BA190}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\strings.c = Ambiente de Teste de Programas\strings.c
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
