@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\mainResposta.c" />
+    <ClCompile Include="arquivos.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="entrada.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

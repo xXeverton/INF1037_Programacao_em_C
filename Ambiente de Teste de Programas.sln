@@ -34,8 +34,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de pon
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de cadeias de caracteres e recursão", "Exercícios básicos de cadeias de caracteres e recursão", "{6E5CE224-BF67-48F3-AF32-978FED2BA190}"
 	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\resolucao_9.c = Ambiente de Teste de Programas\resolucao_9.c
 		Ambiente de Teste de Programas\strings.c = Ambiente de Teste de Programas\strings.c
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arquivos", "Exercícios básicos de arquivos", "{D64A8DE5-B20E-4A69-AB89-E29F8755668B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
