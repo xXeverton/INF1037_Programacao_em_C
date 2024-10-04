@@ -22,7 +22,8 @@
     <ClCompile Include="arquivos.c" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="entrada.txt" />
+    <Text Include="entrada0.txt" />
+    <Text Include="entrada1.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
