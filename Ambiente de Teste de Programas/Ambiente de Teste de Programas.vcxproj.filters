@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exercicio06_structs.c">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="exercicio00_arqBin.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

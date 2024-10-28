@@ -56,7 +56,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de tip
 		Ambiente de Teste de Programas\exercicio03_structs.c = Ambiente de Teste de Programas\exercicio03_structs.c
 		Ambiente de Teste de Programas\exercicio04_structs.c = Ambiente de Teste de Programas\exercicio04_structs.c
 		Ambiente de Teste de Programas\exercicio05_structs.c = Ambiente de Teste de Programas\exercicio05_structs.c
+		Ambiente de Teste de Programas\exercicio06_structs.c = Ambiente de Teste de Programas\exercicio06_structs.c
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arquivo binário", "Exercícios básicos de arquivo binário", "{E219AE0D-154F-4612-BAB1-CBC2D43CEEF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
