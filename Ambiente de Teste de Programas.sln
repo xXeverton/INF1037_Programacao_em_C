@@ -51,6 +51,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teoria", "Teoria", "{E86A34
 		Ambiente de Teste de Programas\vetores_teoria01.c = Ambiente de Teste de Programas\vetores_teoria01.c
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de tipos estruturados", "Exercícios básicos de tipos estruturados", "{B3D4D011-2446-4116-A9D9-4703A63F9CE1}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\exercicio03_structs.c = Ambiente de Teste de Programas\exercicio03_structs.c
+		Ambiente de Teste de Programas\exercicio04_structs.c = Ambiente de Teste de Programas\exercicio04_structs.c
+		Ambiente de Teste de Programas\exercicio05_structs.c = Ambiente de Teste de Programas\exercicio05_structs.c
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

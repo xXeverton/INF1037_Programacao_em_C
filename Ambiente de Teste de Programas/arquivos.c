@@ -38,50 +38,86 @@
 //}
 //
 //
+
 // ex3
-//void imprime_arquivo(file* arq)
-//{
-//	char linha[256];
-//	while (!feof(arq))
-//	{
-//		fscanf(arq, "%[^\n]", linha);
-//		fgetc(arq);
-//		printf("%s\n", linha);
-//	}
-//}
+void imprime_arquivo(FILE* arq)
+{
+	char linha[256];
+	while (!feof(arq))
+	{
+		fscanf(arq, "%[^\n]", linha);
+		fgetc(arq);
+		printf("%s\n", linha);
+	}
+}
 
 
 // ex4
-FILE* merge_arquivo(FILE* arq1, FILE* arq2)
+void merge_arquivo(FILE* arq1, FILE* arq2, FILE* saida)
 {
+
+	char ch;
+	while ((ch = fgetc(arq1)) != EOF)
+	{
+		fprintf(saida, "%c", ch);
+	}
+
+
+	while ((ch = fgetc(arq2)) != EOF)
+	{
+		fprintf(saida, "%c", ch);
+	}
+
+
+	
+}
+
+
+// ex10
+void criptografia(FILE* entrada, FILE* saida)
+{
+	int key = 1;
 	char linha[256] = "";
-	FILE* saida = fopen("saida.txt", "w");
-	while (!feof(arq1))
+	char linha_cripto[256] = "";
+	while (!feof(entrada))
 	{
-		fscanf(arq1, "%s", linha);
-		fgetc(arq1);
-		fprintf(saida, linha);
-	}
+		fscanf(entrada, "%[^\n]", linha);
+		fgetc(entrada);	
+		int tamanho = strlen(linha);
+		printf("%s\n", linha);
+		for (int i = 0; i < tamanho; ++i)
+		{
+			linha_cripto[i] = linha[i] + key;
+		}
+		linha_cripto[tamanho] = '\0';	
 
-	while (!feof(arq2))
+		fprintf(saida, "%s\n", linha_cripto);
+	}
+}
+
+
+void descriptografia(FILE* entrada, FILE* saida)
+{
+	int key = 1;
+	char linha[256] = "";
+	char linha_decripto[256] = "";
+	while (!feof(entrada))
 	{
-		fscanf(arq2, "%s", linha);
-		fgetc(arq2);
-		fprintf(saida, linha);
+		fscanf(entrada, "%[^\n]", linha);
+		fgetc(entrada);
+		int tamanho = strlen(linha);
+		for (int i = 0; i < tamanho; ++i)
+		{
+			linha_decripto[i] = linha[i] - key;
+		}
+		linha_decripto[tamanho] = '\0';
+		fprintf(saida, "%s\n", linha_decripto);
 	}
-
-	return saida;
 }
 
 
 int main(void)
 {
-	FILE* entrada0 = fopen("entrada0.txt", "r");
-	FILE* entrada1 = fopen("entrada1.txt", "r");
-	FILE* saida = merge_arquivo(entrada0, entrada1);
 
-	fclose(entrada0);
-	fclose(entrada1);
-	fclose(saida);
 	return 0;
 }
