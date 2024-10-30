@@ -73,7 +73,7 @@ Cliente** montaVetorClientes(FILE* arq, int n)
 
 float bodyMassIndex(Cliente c, int* status)
 {	
-	float indice = c.m.peso / c.m.altura;
+	float indice = c.m.peso / (c.m.altura * c.m.altura);
 	if (indice < 25.0f) *status = 0;
 	else *status = 1;
 	return indice;
@@ -98,7 +98,7 @@ int contaAcimaPeso(Cliente** v, int qtd)
 	int contador = 0;
 	for (int i = 0; i < qtd; ++i)
 	{
-		if ((v[i]->m.peso / v[i]->m.altura) >= 25.0f)
+		if ((v[i]->m.peso / (v[i]->m.altura * v[i]->m.altura)) >= 25.0f)
 			contador++;
 	}
 	return contador;
@@ -123,7 +123,7 @@ AcimaPeso** criaAcimaPeso(Cliente** v, int qtd)
 	int j = 0;
 	for (int i = 0; i < qtd; ++i)
 	{
-		if ((v[i]->m.peso / v[i]->m.altura) >= 25.0f)
+		if ((v[i]->m.peso / (v[i]->m.altura * v[i]->m.altura)) >= 25.0f)
 		{	
 			p[j]->nome = (char*)malloc(sizeof(char) * (len(v[i]->nome) + 1));
 			copy(p[j]->nome, v[i]->nome);
