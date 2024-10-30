@@ -127,7 +127,7 @@ AcimaPeso** criaAcimaPeso(Cliente** v, int qtd)
 		{	
 			p[j]->nome = (char*)malloc(sizeof(char) * (len(v[i]->nome) + 1));
 			copy(p[j]->nome, v[i]->nome);
-			p[j]->indice = v[i]->m.peso / v[i]->m.altura;
+			p[j]->indice = v[i]->m.peso / (v[i]->m.altura * v[i]->m.altura);
 			++j;
 		}
 	}
@@ -206,7 +206,7 @@ int main(void)
 	int n = contaAcimaPeso(v, qtd);
 	float media = mediaBMI(p, n);
 	printf("%d pessoas acima do peso\n", n);
-	printf("Media BMI acima do peso: %.1f\n", media);
+	printf("Media BMI acima do peso: %.2f\n", media);
 	imprimeAcimaPeso(p, n);
 	
 
