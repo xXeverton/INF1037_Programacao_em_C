@@ -85,9 +85,9 @@ void imprime(Cliente** v, int qtd)
 	for (int i = 0; i < qtd; ++i)
 	{
 		int status;
-		printf("%s , %d, %c, %.2f, %.2f", v[i]->nome, v[i]->id, v[i]->genero, v[i]->m.peso, v[i]->m.altura);
+		printf("%s , %d, %c, %.1f, %.1f", v[i]->nome, v[i]->id, v[i]->genero, v[i]->m.peso, v[i]->m.altura);
 		float bmi = bodyMassIndex(*v[i], &status);
-		printf(" BMI = %.2f, ", bmi);
+		printf(" BMI = %.1f, ", bmi);
 		if (status == 0) printf("abaixo do peso\n");
 		else printf("acima do peso\n");
 	}
@@ -139,7 +139,7 @@ void imprimeAcimaPeso(AcimaPeso** p, int n)
 {
 	for (int i = 0; i < n; ++i)
 	{
-		printf("%s: %.2f\n", p[i]->nome, p[i]->indice);
+		printf("%s: %.1f\n", p[i]->nome, p[i]->indice);
 	}
 }
 
@@ -206,7 +206,7 @@ int main(void)
 	int n = contaAcimaPeso(v, qtd);
 	float media = mediaBMI(p, n);
 	printf("%d pessoas acima do peso\n", n);
-	printf("Media BMI acima do peso: %.2f\n", media);
+	printf("Media BMI acima do peso: %.1f\n", media);
 	imprimeAcimaPeso(p, n);
 	
 
