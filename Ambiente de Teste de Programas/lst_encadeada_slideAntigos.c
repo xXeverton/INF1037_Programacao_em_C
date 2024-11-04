@@ -115,10 +115,109 @@ Elemento* lst_insere_ordenado(Elemento* lst, int val)
 	Elemento* novo;
 	Elemento* a = NULL;		// ponteiro para percorrer elemento anterior
 	Elemento* p = lst;		// ponteiro para percorrer a lista
+	// procura posicao de insercao
+	while (p != NULL && (p->info < val))
+	{
+		a = p;
+		p = p->prox;
+	}
+	// cria novo elemento
+	novo = (Elemento*)malloc(sizeof(Elemento));
+	if (novo == NULL)
+	{
+		return NULL;
+	}
+
+	if (a == NULL)		// insere no inicio
+	{
+		novo->prox = lst;
+		lst = novo;
+	}
+	else				// insere no meio da lista
+	{
+		novo->prox = a->prox;
+		a->prox = novo;
+	}
+
+	return lst;
+}
+
+// Uso de funcoes recursivas em Listas Encadeadas
+
+// Funcao imprime recursiva
+void lst_imprime_rec(Elemento* lst)
+{
+	if (!lst_vazia(lst))
+	{	// imprime primeiro elemento
+		printf("info: %d\n", lst->info);
+		// imprime sub-lista
+		lst_imprime_rec(lst->prox);
+
+	}
 }
 
 
+// Funcao imprime recursiva invertida
+//void lst_imprime_rec(Elemento* lst)
+//{
+//	if (!lst_vazia(lst))
+//	{
+//		// imprime sub-lista
+//		lst_imprime_rec(lst->prox);
+//		// imprime ultimo elemento
+//		printf("info: %d\n", lst->info);
+//	}
+//}
 
+
+
+// Funcao retira recursiva
+Elemento* lst_retira_rec(Elemento* lst, int val)
+{
+	if (!lst_vazia(lst))
+	{
+		// verifica se o elemento a ser retirada e o primeiro
+		if (lst->info == val)
+		{
+			Elemento* t = lst;		// temporario para poder liberar
+			lst = lst->prox;
+			free(t);
+		}
+		// retira de sub-lista
+		else
+		{
+			lst->prox = lst_retira_rec(lst->prox, val);
+		}
+	}
+	return lst;
+}
+
+
+// Igualdade de listas
+int lst_igual(Elemento* lst1, Elemento* lst2)
+{
+	Elemento* p1;		// ponteiro para percorrer l1
+	Elemento* p2;		// ponteiro para percorrer l2
+	for (p1 = lst1, p2 = lst2; p1 != NULL && p2 != NULL; p1 = p1->prox, p2 = p2->prox)
+	{
+		if (p1->info == p2->info)
+			return 0;
+	}
+	return (p1 == p2);		// retrun 1
+}
+
+
+// Igualdade de listas ( Recursiva )
+int lst_igual_rec(Elemento* lst1, Elemento* lst2)
+{
+	if (lst1 == NULL && lst2 == NULL)
+		return 1;
+	else
+		if (lst1 == NULL || lst2 == NULL)
+			return 0;
+		else
+			return (lst1->info == lst2->info) && lst_igual_rec(lst1->prox, lst2->prox);
+}
 
 
 int main(void)
