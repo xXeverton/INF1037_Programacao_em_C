@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exercicio00_arqBin.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="lst_encadeada_teoria01.c">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
