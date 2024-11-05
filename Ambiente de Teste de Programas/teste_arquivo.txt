@@ -1,0 +1,2 @@
+temperatura= 38; chiquinha gonzada
+frequencia= 140; jose do lins

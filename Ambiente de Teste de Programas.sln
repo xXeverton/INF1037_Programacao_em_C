@@ -41,7 +41,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arq
 	ProjectSection(SolutionItems) = preProject
 		Ambiente de Teste de Programas\arquivos.c = Ambiente de Teste de Programas\arquivos.c
 		Ambiente de Teste de Programas\entrada.txt = Ambiente de Teste de Programas\entrada.txt
-		Ambiente de Teste de Programas\exercicio00_arqBin.c = Ambiente de Teste de Programas\exercicio00_arqBin.c
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teoria", "Teoria", "{E86A348E-1646-4AEA-9715-965E0338DC91}"

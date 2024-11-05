@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lst_encadeada_slideAntigos.c" />
+    <ClCompile Include="teste_arquivo_binario.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="teste_arquivo.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
