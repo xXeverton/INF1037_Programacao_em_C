@@ -78,7 +78,7 @@ Elemento* lst_retira(Elemento* lst, int val)
 {
 	Elemento* a = NULL;		// ponteiro para elmento anterior
 	Elemento* p = lst;		// ponteiro para percorrer a lista
-	// procurar elemento na lista, guardadno anterior
+	// procurar elemento na lista, guardando anterior
 	while (p != NULL && p->info != val)
 	{
 		a = p;
@@ -200,7 +200,7 @@ int lst_igual(Elemento* lst1, Elemento* lst2)
 	Elemento* p2;		// ponteiro para percorrer l2
 	for (p1 = lst1, p2 = lst2; p1 != NULL && p2 != NULL; p1 = p1->prox, p2 = p2->prox)
 	{
-		if (p1->info == p2->info)
+		if (p1->info != p2->info)
 			return 0;
 	}
 	return (p1 == p2);		// retrun 1
