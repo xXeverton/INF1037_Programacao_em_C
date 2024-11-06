@@ -45,6 +45,7 @@ char* gravaRegistro(Paciente** pac, char* nomeArq, int qtd)
 	while (!feof(arq))
 	{
 		fscanf(arq, "%[^=]= %f; %[^\n]\n", pac[i]->tipo, &pac[i]->valor, pac[i]->nome);
+		i++;
 	}
 
 	char* nomeArqBin = "registros.dat";
@@ -106,7 +107,7 @@ void imprimeRegistro(char* nomeArqBin, int qtd)
 	for (int i = 0; i < qtd; ++i)
 	{
 		fread(p[i], sizeof(Paciente), 1, arqbin);
-		printf("%s = %.2f; %s", p[i]->tipo, p[i]->valor, p[i]->nome);
+		printf("%s = %.2f; %s\n", p[i]->tipo, p[i]->valor, p[i]->nome);
 	}
 	
 	libera(p, qtd);
