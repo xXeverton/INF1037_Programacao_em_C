@@ -69,6 +69,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arq
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de lista encadeada", "Exercícios básicos de lista encadeada", "{897F9DD3-6DE0-4036-B8B4-47AF484FFB13}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\exercicio01_lst.c = Ambiente de Teste de Programas\exercicio01_lst.c
+		Ambiente de Teste de Programas\exercicio02_lst.c = Ambiente de Teste de Programas\exercicio02_lst.c
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -75,7 +75,13 @@ No* quebraAoMeio(No* lista)
 	}
 	No* ant = NULL;
 	No* p = lista;
-	for ()
+	for (int i = 0; i < metade; ++i)
+	{
+		ant = p;
+		p = p->prox;
+	}
+	ant->prox = NULL;
+	return p;
 }
 
 
@@ -88,7 +94,9 @@ int main(void)
 	No* n2 = cria(2, "b", n3);
 	No* n1 = cria(1, "a", n2);
 	imprime(n1);
-	
+	No* quebrado = quebraAoMeio(n1);
+	printf("\n");
+	imprime(quebrado);
 
 
 
