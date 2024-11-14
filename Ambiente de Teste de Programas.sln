@@ -46,6 +46,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teoria", "Teoria", "{E86A348E-1646-4AEA-9715-965E0338DC91}"
 	ProjectSection(SolutionItems) = preProject
 		Ambiente de Teste de Programas\lst_encadeada_slideAntigos.c = Ambiente de Teste de Programas\lst_encadeada_slideAntigos.c
+		Ambiente de Teste de Programas\recursao_teoria.c = Ambiente de Teste de Programas\recursao_teoria.c
 		Ambiente de Teste de Programas\strings_teoria01.c = Ambiente de Teste de Programas\strings_teoria01.c
 		Ambiente de Teste de Programas\strings_teoria02.c = Ambiente de Teste de Programas\strings_teoria02.c
 		Ambiente de Teste de Programas\structs_teoria01.c = Ambiente de Teste de Programas\structs_teoria01.c
@@ -67,7 +68,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arq
 		Ambiente de Teste de Programas\teste_arquivo_binario.c = Ambiente de Teste de Programas\teste_arquivo_binario.c
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de lista encadeada", "Exercícios básicos de lista encadeada", "{75B575E2-10A0-4323-8444-DC8F8BBE200C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de lista encadeada", "Exercícios básicos de lista encadeada", "{897F9DD3-6DE0-4036-B8B4-47AF484FFB13}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\exercicio01_lst.c = Ambiente de Teste de Programas\exercicio01_lst.c
+		Ambiente de Teste de Programas\exercicio02_lst.c = Ambiente de Teste de Programas\exercicio02_lst.c
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

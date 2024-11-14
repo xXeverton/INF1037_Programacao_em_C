@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exercicios_lst01.c">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="exercicio03_lst.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
