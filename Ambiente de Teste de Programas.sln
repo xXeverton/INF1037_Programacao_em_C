@@ -67,6 +67,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arq
 		Ambiente de Teste de Programas\teste_arquivo_binario.c = Ambiente de Teste de Programas\teste_arquivo_binario.c
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de lista encadeada", "Exercícios básicos de lista encadeada", "{75B575E2-10A0-4323-8444-DC8F8BBE200C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
