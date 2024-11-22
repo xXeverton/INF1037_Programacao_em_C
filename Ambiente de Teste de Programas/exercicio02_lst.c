@@ -50,17 +50,24 @@ Pedido* cria(int matricula, char* tipoDoPedido, Pedido* prox)
 }
 
 
-//int maiorMatricula(Pedido* lst)		
-//{
-//	if (lst == NULL)
-//		return -1;
-//	
-//	Pedido* e = lst;
-//	lst = lst->prox;
-//	if (e->matricula < lst->matricula)
-//}
+int maiorMatriculaRec(Pedido* e)
+{
+	if (e == NULL)
+	{
+		return -1;
+	}
+	int maiorProxs = maiorMatriculaRec(e->prox);
+	if (e->matricula > maiorProxs)
+	{
+		return e->matricula;
+	}
+	else
+	{
+		return maiorProxs;
+	}
+}
 
-
+// Questao 3
 int maiorMatricula(Pedido* lst)
 {
 	int maior = 0;
@@ -82,7 +89,7 @@ int main(void)
 	Pedido* n2 = cria(205, "soc", n3);
 	Pedido* n1 = cria(203, "ic", n2);
 	imprimeRec(n1);
-	int maior = maiorMatricula(n1);
+	int maior = maiorMatriculaRec(n1);
 	printf("Maior matricula: %d\n", maior);
 
 
