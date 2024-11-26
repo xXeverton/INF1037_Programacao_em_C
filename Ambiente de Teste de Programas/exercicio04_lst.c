@@ -51,25 +51,37 @@ void imprimeRec(NoLista* lst)
 
 NoLista* mergeLista(NoLista* l1, NoLista* l2)
 {
-	NoLista* ant1 = NULL;
-	NoLista* ant2 = NULL;
-	NoLista* p1 = l1;
-	NoLista* p2 = l2;
-	for (; p1 != NULL && p2 != NULL; p1 = p1->prox, p2 != p2->prox)
+	NoLista* resultado = NULL;
+
+	// caso base
+	if (l1 == NULL)
+		return l2;
+
+	else if (l2 == NULL)
+		return l1;
+
+	// escolha l1 ou l2 e repita
+	if (l1->codigo == l2->codigo)
 	{
-		if (p1->codigo == p2->codigo)
-		{
-			ant2 = p2->prox;
-			free(p2);
-			p2 = ant2;
-		}
-
-		else if (p1->codigo > p2->codigo)
-		{
-			
-		}
-
+		NoLista* t = l2->prox;
+		resultado = l1;
+		free(l2);
+		l2 = t;
+		resultado->prox = mergeLista(l1->prox, l2);
 	}
+	else if (l1->codigo < l2->codigo)
+	{
+		resultado = l1;
+		resultado->prox = mergeLista(l1->prox, l2);
+	}
+
+	else
+	{
+		resultado = l2;
+		resultado->prox = mergeLista(l1, l2->prox);
+	}
+
+	return resultado;
 }
 
 
@@ -95,7 +107,34 @@ int main(void)
 			return NULL;
 	}
 
+	printf("Lista 1:\n");
 	imprimeRec(lst1);
+
+	char* n2[6] = {
+		"lia",
+		"rosa",
+		"vera",
+		"edu",
+		"rui",
+		"leo",
+	};
+
+	int c2[6] = { 888, 777,554,440,333,111 };
+
+	NoLista* lst2 = NULL;
+	for (int i = 0; i < 6; ++i)
+	{
+		lst2 = cria(c2[i], n2[i], lst2);
+		if (lst2 == NULL) 
+			return NULL;
+	}
+
+	printf("Lista 2\n");
+	imprimeRec(lst2);
+
+	NoLista* novaLst = mergeLista(lst1, lst2);
+	printf("Nova Lista Merge:\n");
+	imprimeRec(novaLst);
 
 	return 0;
 }
