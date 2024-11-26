@@ -75,6 +75,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de lis
 		Ambiente de Teste de Programas\exercicio04_lst.c = Ambiente de Teste de Programas\exercicio04_lst.c
 		Ambiente de Teste de Programas\exercicio05_lst.c = Ambiente de Teste de Programas\exercicio05_lst.c
 		Ambiente de Teste de Programas\exercicio06_lst.c = Ambiente de Teste de Programas\exercicio06_lst.c
+		Ambiente de Teste de Programas\exercicio07_lst.c = Ambiente de Teste de Programas\exercicio07_lst.c
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios de revisão G2", "Exercícios de revisão G2", "{B18905AA-960A-4A1C-844A-4BC61CB1A835}"
