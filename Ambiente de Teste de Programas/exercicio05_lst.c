@@ -24,6 +24,18 @@ void copyRec(char* dst, char* src)
 	}
 }
 
+void imprimeRec(No* lst)
+{
+	if (lst == NULL)
+		return;
+
+	else
+	{
+		printf("%d\t%-20s\t%c\n", lst->ident, lst->nome, lst->sexo);
+		imprimeRec(lst->prox);
+	}
+}
+
 
 No* cria(int id, char* nome, char sexo, No* prox)
 {
@@ -34,11 +46,11 @@ No* cria(int id, char* nome, char sexo, No* prox)
 	novo->ident = id;
 	copyRec(novo->nome, nome);
 	novo->sexo = sexo;
-	novo->prox;
+	novo->prox = prox;
 	return novo;
 }
 
-
+// funcao que faz copia de uma lista encadeada de forma recursiva
 No* fazCopia(No* lst)
 {
 	if (lst == NULL)
@@ -46,13 +58,42 @@ No* fazCopia(No* lst)
 
 	else
 	{
+		No* novo = (No*)malloc(sizeof(No));		// Alocar a memoria para um novo No
+		if (novo == NULL)
+		{
+			free(novo);
+			return NULL;
+		}
+		// copia os dados para o novo No
+		novo->ident = lst->ident;
+		copyRec(novo->nome, lst->nome);
+		novo->sexo = lst->sexo;
+		novo->prox = fazCopia(lst->prox);
 
+		return novo;
 	}
 }
 
 
 int main(void)
 {
+	No* d = cria(4, "Luiza", 'M', NULL);
+	No* c = cria(3, "Magalhaes", 'H', d);
+	No* b = cria(2, "Vanuza", 'M', c);
+	No* a = cria(1, "Nathi", 'M', b);
+	printf("Lista original:\n");
+	imprimeRec(a);
+
+
+	printf("Copia: \n");
+	No* copia = fazCopia(a);
+	if (copia == NULL)
+	{
+		printf("Erro ao alocar memoria\n");
+		exit(1);
+	}
+	imprimeRec(copia);
+
 
 	return 0;
 }
