@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Nao finalizado - Duvida enunciado - Como controlar o loop na main usando o 'montaVetor'?
 
 void concate(char* dst, char* src)
 {
@@ -14,6 +15,7 @@ void concate(char* dst, char* src)
 		++dst;
 		++src;
 	}
+	*dst = '\0';
 }
 
 void copy(char* dst, char* src)
@@ -24,6 +26,7 @@ void copy(char* dst, char* src)
 		++dst;
 		++src;
 	}
+	*dst = '\0';
 }
 
 
@@ -43,11 +46,11 @@ char* montaVetor(FILE* arq)
 	if (n == 0)
 		return NULL;
 
-	char* novo = (char*)malloc(sizeof(char) * (len(nome) + len(profissao) + 1));
+	char* novo = (char*)malloc(sizeof(char) * (len(nome) + len(profissao) + 2));
 	if (novo == NULL)
 		return NULL;
 
-	novo = "";
+
 	copy(novo, profissao);
 	concate(novo, " ");
 	concate(novo, nome);
@@ -76,7 +79,15 @@ int main(void)
 		printf("Erro ao alocar memoria\n");
 	}
 
-	while (!feof(arq) && )
+	int i = 0;
+	while (!feof(arq))
+	{
+		v[i] = montaVetor(arq);
+		if (v[i] == NULL)
+		{
+			exit(1);
+		}
+	}
 
 	fclose(arq);
 	return 0;

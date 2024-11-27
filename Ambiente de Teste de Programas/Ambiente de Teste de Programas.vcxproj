@@ -19,9 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exercicio05_revisao05.c" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="entrada_exercicio05_G2.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
