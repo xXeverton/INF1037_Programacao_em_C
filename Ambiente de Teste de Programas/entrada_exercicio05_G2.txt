@@ -1,0 +1,4 @@
+3
+ada lovelace: escritora
+aaa ccc e ddd: engenheiro
+xx yy de zz: medico
