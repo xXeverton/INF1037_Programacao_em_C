@@ -120,33 +120,28 @@ void imprime(Aluno* head)
 //     a função deve gravar primeiro um int indicando o total de elementos
 void escreveArquivoBin(Aluno* head, char* nomeArquivo)
 {
-	FILE* arqBin = fopen(nomeArquivo, "wb");
-	if (arqBin == NULL)
+	int num = 0;
+	for (Aluno* p = head; p != NULL; p = p->prox)
 	{
-		printf("Erro ao abrir o arquivo\n");
-		exit(2);
+		num++;
 	}
 
-	int totalEl = 0;
-	Aluno* p = head;
-	while (p != NULL)
+	FILE* arqbin = fopen(nomeArquivo, "Wb");
+	if (arqbin == NULL)
 	{
-		p = p->prox;
-		totalEl++;
+		printf("Erro ao abrir arquivo\n");
+		exit(1);
 	}
 
-	fwrite(&totalEl, sizeof(int), 1, arqBin);
+	fwrite(&num, sizeof(int), 1, arqbin);
 
-	p = head;
-	while (p != NULL)
+	for (Aluno* p = head; p != NULL; p = p->prox)
 	{
-
-		fwrite(&p->dados.nota, sizeof(float), 1, arqBin);
-		fwrite(p->dados.nome, sizeof(char), len(p->dados.nome) + 1, arqBin);
-		p = p->prox;
+		// NAO fwrite(&p->dados, sizeof(AlunoInfo), 1, arqbin);
+		fwrite(&p->dados.nota, sizeof(float), 1, arqbin);
+		fwrite(p->dados.nome, len(p->dados.nome) + 1, 1, arqbin);
 	}
 
-	fclose(arqBin);
 }
 
 
