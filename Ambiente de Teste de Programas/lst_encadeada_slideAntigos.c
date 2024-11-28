@@ -122,7 +122,7 @@ Elemento* lst_insere_ordenado(Elemento* lst, int val)
 		p = p->prox;
 	}
 	// cria novo elemento
-	novo = (Elemento*)malloc(sizeof(Elemento));
+	novo = lst_criaNo(val);
 	if (novo == NULL)
 	{
 		return NULL;
