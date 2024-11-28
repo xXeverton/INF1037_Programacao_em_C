@@ -102,9 +102,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2023.2", "2023.2", "{0287A9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2024.1", "2024.1", "{FA166E95-D57A-46FB-B335-046D3ED3B1C6}"
 	ProjectSection(SolutionItems) = preProject
-		Ambiente de Teste de Programas\exercicio_Grafo_dirigido.c = Ambiente de Teste de Programas\exercicio_Grafo_dirigido.c
 		..\..\..\..\OneDrive - puc-rio.br\3º Período\INF1037 - PROGRAMAÇÃO EM C - 33D\C - ANTIGO\Provas-Testes 2024.1\INF1037_CB_P2_2024_1.pdf = ..\..\..\..\OneDrive - puc-rio.br\3º Período\INF1037 - PROGRAMAÇÃO EM C - 33D\C - ANTIGO\Provas-Testes 2024.1\INF1037_CB_P2_2024_1.pdf
 		Ambiente de Teste de Programas\P2_2024_1.c = Ambiente de Teste de Programas\P2_2024_1.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2023.1", "2023.1", "{88214DB8-4AD8-4502-BEFA-77DADC77AB7A}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\P2_2023.1.c = Ambiente de Teste de Programas\P2_2023.1.c
 	EndProjectSection
 EndProject
 Global
@@ -130,6 +134,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0287A92A-C70B-4B0F-82E9-151F366DAD64} = {B907A1E1-82D1-4E5F-AD5D-BB35FC90E521}
 		{FA166E95-D57A-46FB-B335-046D3ED3B1C6} = {B907A1E1-82D1-4E5F-AD5D-BB35FC90E521}
+		{88214DB8-4AD8-4502-BEFA-77DADC77AB7A} = {B907A1E1-82D1-4E5F-AD5D-BB35FC90E521}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A95A90BC-6B7D-4127-BF0C-738B3D052C5D}

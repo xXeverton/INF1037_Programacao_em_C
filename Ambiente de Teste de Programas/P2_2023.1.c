@@ -72,7 +72,8 @@ void setGraph(Graph* g, Edge* edges1, int n)
 		if (g->vetor[index] == NULL)
 		{
 			exit(1);
-		}	
+		}
+
 	}
 }
 
@@ -99,13 +100,13 @@ float popularity(Graph* g, int n, int vertice)
 	for (int i = 0; i < n; ++i)
 	{
 		Node* p = g->vetor[i];
-		if (p->end == vertice)
+		while (p != NULL)
 		{
-			while (p != NULL)
+			if (p->end == vertice)
 			{
 				soma += p->weight;
-				p = p->next;
 			}
+			p = p->next;
 		}
 	}
 
@@ -140,6 +141,7 @@ int main(void)
 		{4,2,1.0f},
 	};
 	Graph* g = createGraph();
+	initializeGraph(g, TAM);
 	setGraph(g, edges1, TAM);
 	printGraph(g, TAM);
 
