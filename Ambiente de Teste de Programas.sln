@@ -102,6 +102,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2023.2", "2023.2", "{0287A9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2024.1", "2024.1", "{FA166E95-D57A-46FB-B335-046D3ED3B1C6}"
 	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\exercicio_Grafo_dirigido.c = Ambiente de Teste de Programas\exercicio_Grafo_dirigido.c
 		..\..\..\..\OneDrive - puc-rio.br\3º Período\INF1037 - PROGRAMAÇÃO EM C - 33D\C - ANTIGO\Provas-Testes 2024.1\INF1037_CB_P2_2024_1.pdf = ..\..\..\..\OneDrive - puc-rio.br\3º Período\INF1037 - PROGRAMAÇÃO EM C - 33D\C - ANTIGO\Provas-Testes 2024.1\INF1037_CB_P2_2024_1.pdf
 		Ambiente de Teste de Programas\P2_2024_1.c = Ambiente de Teste de Programas\P2_2024_1.c
 	EndProjectSection
