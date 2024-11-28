@@ -146,6 +146,8 @@ char* retorna_nome(char* s)
 	elimina(s, e1);
 	elimina(s, e2);
 	elimina(s, e3);
+	//printf("%s", s);
+	
 
 	// verificar quantos nomes possui a cadeia
 	int qtd_nomes = 0;
@@ -155,6 +157,7 @@ char* retorna_nome(char* s)
 			++qtd_nomes;
 	}
 	qtd_nomes++;
+
 
 	// Fazer uma vetor para armazenar os nomes
 	char** vetor = (char**)malloc(qtd_nomes * sizeof(char*));
@@ -194,7 +197,8 @@ char* retorna_nome(char* s)
 	for (int i = 0; i < (qtd_nomes - 1); ++i)
 	{
 		char inicial = vetor[i][0];
-		strcat(resposta, vetor[i][0]);
+		printf("%s", vetor[i]);
+		strncat(resposta, vetor[i][0], 1);
 		strcat(resposta, ponto);
 	}
 
@@ -211,6 +215,7 @@ char* retorna_nome(char* s)
 	}
 
 	strcpy(resposta_final, resposta);
+	resposta_final[strlen(resposta) + 1] = '\0';
 	return resposta_final;
 }
 
@@ -222,12 +227,12 @@ int maiorQueX(int n, int v[], int x);
 
 int main(void)
 {	
-	/*	Questao 9	
+	
 	char s1[] = "Joao Jose da Silva";
 	char* s2 = retorna_nome(s1);
 
-	printf("%s\n", s1);
-	*/
+	printf("%s\n", s2);
+	
 
 
 	return 0;
