@@ -93,8 +93,6 @@ void printGraph(Graph* g, int n)
 	printf("\n");
 }
 
-
-
 float popularity(Graph* g, int n, int vertice)
 {
 	float soma = 0.0f;
