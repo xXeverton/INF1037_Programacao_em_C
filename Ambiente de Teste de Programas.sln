@@ -32,6 +32,80 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de pon
 		Ambiente de Teste de Programas\ponteiros_vetores_alocacao.c = Ambiente de Teste de Programas\ponteiros_vetores_alocacao.c
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de cadeias de caracteres e recursão", "Exercícios básicos de cadeias de caracteres e recursão", "{6E5CE224-BF67-48F3-AF32-978FED2BA190}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\strings.c = Ambiente de Teste de Programas\strings.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arquivos", "Exercícios básicos de arquivos", "{D64A8DE5-B20E-4A69-AB89-E29F8755668B}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\arquivos.c = Ambiente de Teste de Programas\arquivos.c
+		Ambiente de Teste de Programas\entrada.txt = Ambiente de Teste de Programas\entrada.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teoria", "Teoria", "{E86A348E-1646-4AEA-9715-965E0338DC91}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\lst_encadeada_slideAntigos.c = Ambiente de Teste de Programas\lst_encadeada_slideAntigos.c
+		Ambiente de Teste de Programas\recursao_teoria.c = Ambiente de Teste de Programas\recursao_teoria.c
+		Ambiente de Teste de Programas\strings_teoria01.c = Ambiente de Teste de Programas\strings_teoria01.c
+		Ambiente de Teste de Programas\strings_teoria02.c = Ambiente de Teste de Programas\strings_teoria02.c
+		Ambiente de Teste de Programas\structs_teoria01.c = Ambiente de Teste de Programas\structs_teoria01.c
+		Ambiente de Teste de Programas\vetores_teoria01.c = Ambiente de Teste de Programas\vetores_teoria01.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de tipos estruturados", "Exercícios básicos de tipos estruturados", "{B3D4D011-2446-4116-A9D9-4703A63F9CE1}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\exercicio03_structs.c = Ambiente de Teste de Programas\exercicio03_structs.c
+		Ambiente de Teste de Programas\exercicio04_structs.c = Ambiente de Teste de Programas\exercicio04_structs.c
+		Ambiente de Teste de Programas\exercicio05_structs.c = Ambiente de Teste de Programas\exercicio05_structs.c
+		Ambiente de Teste de Programas\exercicio06_structs.c = Ambiente de Teste de Programas\exercicio06_structs.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de arquivo binário", "Exercícios básicos de arquivo binário", "{E219AE0D-154F-4612-BAB1-CBC2D43CEEF1}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\exercicio00_arqBin.c = Ambiente de Teste de Programas\exercicio00_arqBin.c
+		Ambiente de Teste de Programas\teste_arquivo.txt = Ambiente de Teste de Programas\teste_arquivo.txt
+		Ambiente de Teste de Programas\teste_arquivo_binario.c = Ambiente de Teste de Programas\teste_arquivo_binario.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios básicos de lista encadeada", "Exercícios básicos de lista encadeada", "{897F9DD3-6DE0-4036-B8B4-47AF484FFB13}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\exercicio01_lst.c = Ambiente de Teste de Programas\exercicio01_lst.c
+		Ambiente de Teste de Programas\exercicio02_lst.c = Ambiente de Teste de Programas\exercicio02_lst.c
+		Ambiente de Teste de Programas\exercicio04_lst.c = Ambiente de Teste de Programas\exercicio04_lst.c
+		Ambiente de Teste de Programas\exercicio05_lst.c = Ambiente de Teste de Programas\exercicio05_lst.c
+		Ambiente de Teste de Programas\exercicio06_lst.c = Ambiente de Teste de Programas\exercicio06_lst.c
+		Ambiente de Teste de Programas\exercicio07_lst.c = Ambiente de Teste de Programas\exercicio07_lst.c
+		Ambiente de Teste de Programas\exercicio08_lst.c = Ambiente de Teste de Programas\exercicio08_lst.c
+		Ambiente de Teste de Programas\exercicio09_lst.c = Ambiente de Teste de Programas\exercicio09_lst.c
+		Ambiente de Teste de Programas\exercicio10_lst.c = Ambiente de Teste de Programas\exercicio10_lst.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercícios de revisão G2", "Exercícios de revisão G2", "{B18905AA-960A-4A1C-844A-4BC61CB1A835}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\entrada_exercicio04_G2.txt = Ambiente de Teste de Programas\entrada_exercicio04_G2.txt
+		Ambiente de Teste de Programas\entrada_exercicio05_G2.txt = Ambiente de Teste de Programas\entrada_exercicio05_G2.txt
+		Ambiente de Teste de Programas\exercicio01_revisaoG2.c = Ambiente de Teste de Programas\exercicio01_revisaoG2.c
+		Ambiente de Teste de Programas\exercicio02_revisaoG2.c = Ambiente de Teste de Programas\exercicio02_revisaoG2.c
+		Ambiente de Teste de Programas\exercicio03_revisaoG2.c = Ambiente de Teste de Programas\exercicio03_revisaoG2.c
+		Ambiente de Teste de Programas\exercicio04_revisaoG2.c = Ambiente de Teste de Programas\exercicio04_revisaoG2.c
+		Ambiente de Teste de Programas\exercicio05_revisao05.c = Ambiente de Teste de Programas\exercicio05_revisao05.c
+		Ambiente de Teste de Programas\revisao_teoria_struct_lst_arquivo.c = Ambiente de Teste de Programas\revisao_teoria_struct_lst_arquivo.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provas e Testes anteriores", "Provas e Testes anteriores", "{B907A1E1-82D1-4E5F-AD5D-BB35FC90E521}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2023.2", "2023.2", "{0287A92A-C70B-4B0F-82E9-151F366DAD64}"
+	ProjectSection(SolutionItems) = preProject
+		Ambiente de Teste de Programas\P2_2023_2.c = Ambiente de Teste de Programas\P2_2023_2.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2024.1", "2024.1", "{FA166E95-D57A-46FB-B335-046D3ED3B1C6}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\OneDrive - puc-rio.br\3º Período\INF1037 - PROGRAMAÇÃO EM C - 33D\C - ANTIGO\Provas-Testes 2024.1\INF1037_CB_P2_2024_1.pdf = ..\..\..\..\OneDrive - puc-rio.br\3º Período\INF1037 - PROGRAMAÇÃO EM C - 33D\C - ANTIGO\Provas-Testes 2024.1\INF1037_CB_P2_2024_1.pdf
+		Ambiente de Teste de Programas\P2_2024_1.c = Ambiente de Teste de Programas\P2_2024_1.c
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +125,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0287A92A-C70B-4B0F-82E9-151F366DAD64} = {B907A1E1-82D1-4E5F-AD5D-BB35FC90E521}
+		{FA166E95-D57A-46FB-B335-046D3ED3B1C6} = {B907A1E1-82D1-4E5F-AD5D-BB35FC90E521}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A95A90BC-6B7D-4127-BF0C-738B3D052C5D}

@@ -11,10 +11,7 @@ int len(char* s)
 }
 
 
-/*
-* 1) Escreva a função contaB, que recebe uma cadeia e retorna (devolve) 2 valores: o número de ´b´s  e o número de
-* ´B´s. Por exemplo: Cadeia recebida: “Barbudinho bonito”. Tem 1 ‘B’ e 2 ‘b’. Escreva o programa completo para testar a sua função.*
-*/
+// ex1
 void contaBs(char* s)
 {
 	int qb = 0;
@@ -136,105 +133,112 @@ int palindromo(char* s, int n)
 
 
 // ex9
-char* retorna_nome(char* s)
+char* retorna_nome(void)
 {
-	char e1[] = "de ";
-	char e2[] = "da ";
-	char e3[] = ". ";
-
-	// elimina "de " "da " e ". "
-	elimina(s, e1);
-	elimina(s, e2);
-	elimina(s, e3);
-	//printf("%s", s);
-	
-
-	// verificar quantos nomes possui a cadeia
-	int qtd_nomes = 0;
-	for (int i = 0; s[i] != '\0'; ++i)
+	printf("Informe um nome completo:\n");
+	char nome[201] = "";
+	scanf("%[^\n]", nome);
+	int i;
+	for (i = len(nome)-1; i >= 0; --i)
 	{
-		if (s[i] == ' ')
-			++qtd_nomes;
-	}
-	qtd_nomes++;
-
-
-	// Fazer uma vetor para armazenar os nomes
-	char** vetor = (char**)malloc(qtd_nomes * sizeof(char*));
-	if (vetor == NULL)
-	{
-		return NULL;
-	}
-
-
-	// alocar espaco para os nomes
-	for (int i = 0; i < qtd_nomes; ++i)
-	{
-		int tamanho = 0;
-		for (int j = 0; s[j] != ' '; ++j)
+		if (nome[i] == ' ')
 		{
-			++tamanho;
+			break;
 		}
+	}
+	
+	printf("%d\n", i);
 
-		vetor[i] = (char*)malloc((tamanho + 1) * sizeof(char));
-		if (vetor[i] == NULL)
+	char resultado[201] = "";
+
+	strcpy(resultado, &nome[i + 1]);
+
+	printf("%s\n", resultado);
+
+	if (i == -1)
+	{
+		char* r = (char*)malloc((len(resultado) + 1) * sizeof(char));
+		if (r == NULL)
 		{
 			return NULL;
 		}
+		strcpy(r, resultado);
+		return r;
 	}
 
+	int prox = strlen(resultado);
+
+	resultado[prox] = ',';
+	prox++;
+	resultado[prox] = ' ';
+	prox++;
 
 
-
-
-	// montar a string
-	char resposta[101];
-	int qtd_caracteres = 0;
-	char virgula[] = ", ";
-	char ponto[] = ". ";
-	strcpy(resposta, vetor[qtd_nomes-1]);
-	strcat(resposta, virgula);
-	for (int i = 0; i < (qtd_nomes - 1); ++i)
+	for (int j = 0; j < i; ++j)
 	{
-		char inicial = vetor[i][0];
-		printf("%s", vetor[i]);
-		strncat(resposta, vetor[i][0], 1);
-		strcat(resposta, ponto);
+		if (nome[j] >= 'A' && nome[j] <= 'Z')
+		{
+			resultado[prox] = nome[j];
+			prox++;
+			resultado[prox] = '.';
+			prox++;
+			resultado[prox] = ' ';
+			prox++;
+		}
 	}
 
-	for (int i = 0; i < qtd_nomes; ++i)
-	{
-		free(vetor[i]);
-	}
-	free(vetor);
-	
-	char* resposta_final = (char*)malloc((strlen(resposta) + 1) * sizeof(char));
-	if (resposta_final == NULL)
+	resultado[prox - 1] = '\0';
+
+
+	char* r = (char*)malloc((len(resultado) + 1) * sizeof(char));
+	if (r == NULL)
 	{
 		return NULL;
 	}
+	strcpy(r, resultado);
+	return r;
 
-	strcpy(resposta_final, resposta);
-	resposta_final[strlen(resposta) + 1] = '\0';
-	return resposta_final;
 }
 
 
-// ex10
-int maiorQueX(int n, int v[], int x);
+// ex10 
+int	maiorQueX(int n, int* v, int x)
+{
+	// Caso base: quando o tamanho do vetor eh 0, nao ha elementos para comparar
+	if (n == 0)
+	{
+		return 0;
+	}
+
+	// verifica se o ultimo elemento do vetor eh maior que x
+	int count = (v[n - 1] > x) ? 1 : 0;
+
+	// Chamada recursiva para o restante do vetor
+	return count + maiorQueX(n - 1, v, x);
+}
+
+
+// ex11
+int conta_digitos(int n, int k)
+{
+	// Caso base:se n for 0, significa que nao ha mais digitos para verificar
+	if (n == 0)
+	{
+		return 0;
+	}
+
+	// verifica se o ultimo digito de n eh igual a k
+	int count = (n % 10 == k) ? 1 : 0;
+
+	// chamada recursiva removendo o ultimo digito
+	return count + conta_digitos(n / 10, k);
+}
 
 
 
 int main(void)
 {	
 	
-	char s1[] = "Joao Jose da Silva";
-	char* s2 = retorna_nome(s1);
-
-	printf("%s\n", s2);
-	
-
-
 	return 0;
 }
 
