@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="revisao_teoria_struct_lst_arquivo.c">
+    <ClCompile Include="P2_2024_1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
